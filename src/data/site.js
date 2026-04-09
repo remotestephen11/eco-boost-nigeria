@@ -410,21 +410,22 @@ export const companyProfile = {
     ],
   },
   whatsapp: {
-    href: 'https://api.whatsapp.com/send?text=Hello%20Eco%20Boost%20Nigeria%20Limited',
+    href: 'https://api.whatsapp.com/send?phone=2348075554405&text=Hello%20Eco%20Boost%20Nigeria%20Limited',
     label: 'WhatsApp',
   },
   contactDetails: [
     {
       label: 'Head Office',
-      value: 'Registered office details will be published here in line with the approved company profile and official records.',
+      value:
+        'Plot 38 to 40, Amni International Staff Coop Estate, Along Pipeline Rumuchiolu, Eneka Town, Obio Akpor LGA, Rivers State',
     },
     {
       label: 'Email',
-      value: 'The designated business email contact will be inserted here from the approved corporate information set.',
+      value: 'ecoboostnigltd@gmail.com',
     },
     {
       label: 'Phone',
-      value: 'The primary company contact line will appear here once confirmed against the approved corporate profile.',
+      value: '+2348075554405, +2349069099301',
     },
   ],
 }
