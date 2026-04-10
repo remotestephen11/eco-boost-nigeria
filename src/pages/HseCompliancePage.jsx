@@ -3,118 +3,106 @@ import { companyProfile } from '../data/site'
 
 function HseCompliancePage() {
   return (
-    <div className="section-grid">
-      <section className="section-shell overflow-hidden lg:py-6" data-reveal>
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)] lg:items-center">
-          <div>
-            <p className="section-eyebrow">HSE &amp; Compliance</p>
-            <h1 className="heading-display mt-4 max-w-4xl">
-              {companyProfile.hsePage.heroTitle}
-            </h1>
-            <p className="body-copy mt-4 max-w-3xl">
-              {companyProfile.hsePage.heroText}
-            </p>
+    <div className="page-stack">
+      <section className="grid gap-5 xl:grid-cols-[1.04fr_0.96fr]" data-reveal>
+        <div className="section-frame-strong">
+          <div className="section-backdrop" />
+          <div className="relative z-10 max-w-3xl">
+            <div className="eyebrow-line">
+              <span className="section-divider" />
+              <p className="editorial-kicker">HSE &amp; Compliance</p>
+            </div>
+            <h1 className="heading-display mt-5 max-w-3xl">{companyProfile.hsePage.heroTitle}</h1>
+            <p className="editorial-lead mt-5 max-w-2xl">{companyProfile.hsePage.heroText}</p>
 
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               {companyProfile.hsePage.assuranceMarkers.map((item) => (
-                <span key={item} className="info-chip">
+                <span key={item} className="overline-chip">
                   {item}
                 </span>
               ))}
             </div>
           </div>
+        </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-background-elevated shadow-[0_28px_80px_rgba(0,0,0,0.34)]">
-            <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(8,12,17,0.08),rgba(8,12,17,0.42)_72%,rgba(8,12,17,0.86))]" />
-            <img
-              src={hseImage}
-              alt="Industrial personnel in protective equipment representing safety and field compliance"
-              className="h-[270px] w-full object-cover object-center sm:h-[320px] lg:h-[390px]"
-            />
-            <div className="absolute inset-x-0 bottom-0 z-20 p-4 sm:p-5">
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="supporting-panel border-white/10 bg-black/30 backdrop-blur-md">
-                  <p className="text-[0.68rem] uppercase tracking-[0.28em] text-accent">
-                    Compliance Focus
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-white/80">
-                    Safety, reporting, and procedural alignment structured for industrial confidence.
-                  </p>
-                </div>
-                <div className="supporting-panel border-white/10 bg-black/30 backdrop-blur-md">
-                  <p className="text-[0.68rem] uppercase tracking-[0.28em] text-brand-gold">
-                    Field Discipline
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-white/80">
-                    A preventative operating posture supported by awareness, review, and accountability.
-                  </p>
-                </div>
-              </div>
+        <div className="image-shell min-h-[320px]">
+          <img
+            src={hseImage}
+            alt="Field safety and compliance visual with industrial personnel in PPE"
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="image-overlay" />
+          <div className="absolute inset-x-0 bottom-0 z-20 p-5">
+            <div className="image-caption-panel">
+              <p className="text-[0.66rem] uppercase tracking-[0.3em] text-brand-gold">
+                Field Discipline
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/80">
+                Safety, reporting, assurance, and preventative control are treated as working
+                expectations across industrial support activity.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-shell" data-reveal style={{ '--reveal-delay': '90ms' }}>
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <section className="section-frame-strong" data-reveal style={{ '--reveal-delay': '80ms' }}>
+        <div className="section-backdrop opacity-80" />
+        <div className="relative z-10 grid gap-6 xl:grid-cols-[0.76fr_1.24fr]">
           <div>
-            <p className="section-eyebrow">Commitment Areas</p>
-            <h2 className="heading-section mt-4 max-w-3xl">
-              A stronger HSE page built around credible commitment areas relevant to contract review.
+            <div className="eyebrow-line">
+              <span className="section-divider" />
+              <p className="editorial-kicker">Commitment Framework</p>
+            </div>
+            <h2 className="heading-section mt-4 max-w-lg">
+              A serious HSE page organized like an operational framework rather than another card grid.
             </h2>
           </div>
-          <p className="body-copy max-w-xl">
-            The company&apos;s HSE and compliance presentation is organized to reflect operating discipline, not decorative policy language.
-          </p>
-        </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {companyProfile.hsePage.commitments.map((item) => (
-            <article
-              key={item.title}
-              className="premium-card bg-[linear-gradient(180deg,rgba(24,33,44,0.98),rgba(13,18,24,0.98))] p-5"
-              data-reveal
-              style={{ '--reveal-delay': '140ms' }}
-            >
-              <p className="text-[0.68rem] uppercase tracking-[0.26em] text-brand-gold">
-                Commitment
-              </p>
-              <h2 className="mt-3 text-xl font-semibold tracking-[-0.03em] text-text">
-                {item.title}
-              </h2>
-              <p className="mt-4 text-sm leading-7 text-text-muted">
-                {item.description}
-              </p>
-            </article>
-          ))}
+          <div className="grid gap-5 md:grid-cols-2">
+            {companyProfile.hsePage.commitments.map((item, index) => (
+              <div
+                key={item.title}
+                className={`rail-item ${index % 2 === 1 ? 'md:translate-y-7' : ''}`}
+              >
+                <p className="text-[0.66rem] uppercase tracking-[0.3em] text-accent">Commitment</p>
+                <h3 className="mt-3 text-xl font-semibold tracking-[-0.03em] text-text">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-text-muted">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="section-shell" data-reveal style={{ '--reveal-delay': '140ms' }}>
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
-          <div>
-            <p className="section-eyebrow">HSE Philosophy</p>
-            <h2 className="heading-section mt-4 max-w-2xl">
-              Compliance is presented as an operating culture, not a decorative statement.
-            </h2>
-            <p className="body-copy mt-5 max-w-xl">
-              Eco Boost positions HSE and compliance as part of how work should be prepared, communicated, executed, reviewed, and improved. That posture is intended to strengthen trust with clients, contractors, and project stakeholders who expect discipline in the field.
-            </p>
+      <section className="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]" data-reveal style={{ '--reveal-delay': '110ms' }}>
+        <div className="section-frame">
+          <div className="eyebrow-line">
+            <span className="section-divider" />
+            <p className="editorial-kicker">HSE Philosophy</p>
           </div>
+          <h2 className="heading-section mt-4 max-w-lg">
+            Compliance is presented as an operating culture, not a decorative statement.
+          </h2>
+          <p className="editorial-lead mt-5 max-w-lg">
+            Eco Boost positions HSE and compliance as part of how work is prepared, communicated,
+            executed, reviewed, and improved. That posture is intended to strengthen trust with
+            clients, contractors, and project stakeholders.
+          </p>
+        </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {companyProfile.hseHighlight.pillars.map((pillar) => (
-              <article key={pillar.title} className="premium-card p-5" data-reveal style={{ '--reveal-delay': '180ms' }}>
-                <p className="text-[0.68rem] uppercase tracking-[0.26em] text-accent">
-                  HSE Pillar
-                </p>
-                <h3 className="mt-3 text-lg font-semibold tracking-[-0.02em] text-text">
-                  {pillar.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-text-muted">
-                  {pillar.description}
-                </p>
-              </article>
+        <div className="section-frame">
+          <p className="editorial-kicker">HSE Pillars</p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {companyProfile.hseHighlight.pillars.map((pillar, index) => (
+              <div
+                key={pillar.title}
+                className={`outline-panel ${index === 1 || index === 4 ? 'border-accent/18 bg-accent-soft/60' : ''}`}
+              >
+                <h3 className="text-lg font-semibold tracking-[-0.03em] text-text">{pillar.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-text-muted">{pillar.description}</p>
+              </div>
             ))}
           </div>
         </div>

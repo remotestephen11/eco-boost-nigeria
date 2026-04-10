@@ -5,10 +5,11 @@ import { companyProfile } from '../data/site'
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-background-soft/95">
+    <footer className="border-t border-white/6 bg-background-soft/95">
       <div className="page-container py-8 lg:py-10">
-        <div className="overflow-hidden rounded-[2rem] border border-border bg-[linear-gradient(180deg,rgba(21,29,38,0.98),rgba(12,17,22,0.96))] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
-          <div className="grid gap-7 px-5 py-7 lg:grid-cols-[1.25fr_0.8fr_0.8fr_1fr] lg:px-9 lg:py-8">
+        <div className="section-frame-strong">
+          <div className="section-backdrop opacity-80" />
+          <div className="relative z-10 grid gap-7 lg:grid-cols-[1.1fr_0.8fr_0.9fr_1fr]">
             <div className="space-y-5">
               <p className="section-eyebrow">Company Summary</p>
               <BrandLogo />
@@ -33,7 +34,7 @@ function Footer() {
                   <NavLink
                     key={item.path}
                     to={item.path}
-                    className="rounded-2xl border border-transparent px-4 py-3 text-sm text-text-muted transition hover:border-white/6 hover:bg-white/4 hover:text-text"
+                    className="rail-item rounded-none border-l border-white/8 px-0 py-2 text-sm text-text-muted transition hover:text-text"
                   >
                     {item.label}
                   </NavLink>
@@ -43,9 +44,9 @@ function Footer() {
 
             <div>
               <p className="section-eyebrow">Service Highlights</p>
-              <div className="mt-5 grid gap-3">
+              <div className="mt-5 rail-list">
                 {companyProfile.serviceHighlights.map((item) => (
-                  <div key={item} className="premium-card">
+                  <div key={item} className="rail-item">
                     <p className="text-sm font-medium tracking-[0.04em] text-text">
                       {item}
                     </p>
@@ -56,9 +57,9 @@ function Footer() {
 
             <div>
               <p className="section-eyebrow">Contact Details</p>
-              <div className="mt-5 grid gap-3">
+              <div className="mt-5 rail-list">
                 {companyProfile.contactDetails.map((item) => (
-                  <div key={item.label} className="premium-card">
+                  <div key={item.label} className="rail-item">
                     <p className="text-[0.68rem] uppercase tracking-[0.28em] text-brand-gold">
                       {item.label}
                     </p>
@@ -70,9 +71,9 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-3 border-t border-white/6 px-5 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-text-muted sm:flex-row sm:items-center sm:justify-between lg:px-9">
+          <div className="relative z-10 mt-7 flex flex-col gap-3 border-t border-white/6 pt-4 text-[0.68rem] uppercase tracking-[0.24em] text-text-muted sm:flex-row sm:items-center sm:justify-between">
             <p>Premium industrial presentation</p>
-            <p>Corporate contact details and credentials will be aligned to approved company records</p>
+            <p>Oil and gas-led service profile with procurement and inspection support</p>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ function Navbar() {
   const handleCloseMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/88 backdrop-blur-2xl">
+    <header className="sticky top-0 z-50 border-b border-white/6 bg-[linear-gradient(180deg,rgba(7,10,15,0.94),rgba(7,10,15,0.82))] backdrop-blur-2xl">
       <div className="page-container">
         <div className="flex items-center justify-between gap-4 py-4">
           <NavLink to="/" onClick={handleCloseMenu} className="shrink-0">
@@ -33,7 +33,7 @@ function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <div className="rounded-full border border-brand-gold/25 bg-brand-gold/8 px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.26em] text-brand-gold">
+            <div className="rounded-full border border-brand-gold/20 bg-black/20 px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.26em] text-brand-gold">
               Contract-ready presence
             </div>
             <NavLink to="/contact" className="btn-primary">
@@ -58,7 +58,7 @@ function Navbar() {
 
         {isMenuOpen ? (
           <div className="pb-4 lg:hidden">
-            <div className="section-shell rounded-[1.5rem] px-4 py-4">
+            <div className="section-frame rounded-[1.5rem] px-4 py-4">
               <div className="mb-4 flex items-center justify-between gap-3 border-b border-white/6 pb-4">
                 <div>
                   <p className="section-eyebrow">Navigation</p>

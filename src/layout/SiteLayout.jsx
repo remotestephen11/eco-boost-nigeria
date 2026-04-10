@@ -52,7 +52,7 @@ function SiteLayout() {
       <ScrollToTop />
       <div className="min-h-screen bg-transparent text-text">
         <Navbar />
-        <main className="page-container min-h-[calc(100vh-165px)] py-6 lg:py-10">
+        <main className="page-container min-h-[calc(100vh-165px)] py-4 lg:py-6">
           <Outlet />
         </main>
         <Footer />
