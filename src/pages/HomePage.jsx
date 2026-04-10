@@ -5,7 +5,7 @@ import { companyProfile } from '../data/site'
 function HomePage() {
   return (
     <div className="section-grid">
-      <section className="section-shell overflow-hidden lg:py-6">
+      <section className="section-shell overflow-hidden lg:py-6" data-reveal>
         <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:gap-8">
           <div className="max-w-2xl">
             <p className="section-eyebrow">Oil &amp; Gas Services</p>
@@ -69,9 +69,9 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4" data-reveal style={{ '--reveal-delay': '80ms' }}>
         {companyProfile.capabilitySignals.map((item) => (
-          <div key={item} className="premium-card flex min-h-24 items-start gap-4">
+          <div key={item} className="premium-card flex min-h-24 items-start gap-4" data-reveal style={{ '--reveal-delay': '120ms' }}>
             <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-accent-soft text-xs font-semibold uppercase tracking-[0.18em] text-accent">
               EB
             </div>
@@ -87,7 +87,7 @@ function HomePage() {
         ))}
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '120ms' }}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] lg:items-start">
           <div>
             <p className="section-eyebrow">About Snapshot</p>
@@ -125,7 +125,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '160ms' }}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow">Core Services</p>
@@ -143,6 +143,8 @@ function HomePage() {
             <article
               key={service.title}
               className="premium-card flex min-h-[240px] flex-col justify-between bg-[linear-gradient(180deg,rgba(24,33,44,0.98),rgba(15,21,29,0.96))]"
+              data-reveal
+              style={{ '--reveal-delay': '180ms' }}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/20 bg-accent-soft text-sm font-semibold uppercase tracking-[0.18em] text-accent">
@@ -169,7 +171,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '180ms' }}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
           <div>
             <p className="section-eyebrow">Why Eco Boost</p>
@@ -183,7 +185,7 @@ function HomePage() {
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {companyProfile.whyEcoBoost.map((item, index) => (
-              <article key={item.title} className="premium-card p-5">
+              <article key={item.title} className="premium-card p-5" data-reveal style={{ '--reveal-delay': '220ms' }}>
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-accent">
                     0{index + 1}
@@ -201,7 +203,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell overflow-hidden">
+      <section className="section-shell overflow-hidden" data-reveal style={{ '--reveal-delay': '220ms' }}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow">Sector Capability</p>
@@ -261,7 +263,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell overflow-hidden">
+      <section className="section-shell overflow-hidden" data-reveal style={{ '--reveal-delay': '240ms' }}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start">
           <div>
             <p className="section-eyebrow">HSE &amp; Compliance</p>
@@ -294,7 +296,7 @@ function HomePage() {
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {companyProfile.hseHighlight.pillars.map((pillar) => (
-              <article key={pillar.title} className="premium-card p-5">
+              <article key={pillar.title} className="premium-card p-5" data-reveal style={{ '--reveal-delay': '260ms' }}>
                 <p className="text-[0.68rem] uppercase tracking-[0.26em] text-brand-gold">
                   HSE Pillar
                 </p>
@@ -310,7 +312,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '260ms' }}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow">Certifications &amp; Registrations</p>
@@ -345,7 +347,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden rounded-[1.8rem] border border-accent/18 bg-[linear-gradient(135deg,rgba(200,106,45,0.14),rgba(15,21,29,0.96)_32%,rgba(9,13,18,0.98))] px-5 py-7 shadow-[0_28px_80px_rgba(0,0,0,0.28)] sm:px-7 lg:px-9 lg:py-8">
+      <section className="overflow-hidden rounded-[1.8rem] border border-accent/18 bg-[linear-gradient(135deg,rgba(200,106,45,0.14),rgba(15,21,29,0.96)_32%,rgba(9,13,18,0.98))] px-5 py-7 shadow-[0_28px_80px_rgba(0,0,0,0.28)] sm:px-7 lg:px-9 lg:py-8" data-reveal style={{ '--reveal-delay': '280ms' }}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_auto] lg:items-center">
           <div>
             <p className="section-eyebrow">Next Step</p>

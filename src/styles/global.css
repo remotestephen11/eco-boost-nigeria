@@ -60,6 +60,32 @@ select {
   min-height: 100vh;
 }
 
+html[data-motion='ready'] [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px) scale(0.985);
+  transition:
+    opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  filter: blur(6px);
+}
+
+html[data-motion='ready'] [data-reveal-visible='true'] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion='ready'] [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    filter: none;
+  }
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -110,7 +136,7 @@ body::before {
 }
 
 @utility premium-card {
-  @apply rounded-[1.35rem] border border-border bg-surface-strong/90 p-4 shadow-[0_22px_50px_rgba(0,0,0,0.2)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-border-strong sm:p-5;
+  @apply rounded-[1.35rem] border border-border bg-surface-strong/90 p-4 shadow-[0_22px_50px_rgba(0,0,0,0.2)] backdrop-blur-sm transition duration-500 hover:-translate-y-1 hover:border-border-strong hover:shadow-[0_28px_70px_rgba(0,0,0,0.28)] sm:p-5;
 }
 
 @utility supporting-panel {
@@ -122,15 +148,15 @@ body::before {
 }
 
 @utility btn-primary {
-  @apply inline-flex items-center justify-center rounded-full border border-accent-strong bg-accent px-5 py-3 text-[0.76rem] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_18px_45px_rgba(200,106,45,0.35)] transition hover:-translate-y-0.5 hover:bg-accent-strong;
+  @apply inline-flex items-center justify-center rounded-full border border-accent-strong bg-accent px-5 py-3 text-[0.76rem] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_18px_45px_rgba(200,106,45,0.35)] transition duration-500 hover:-translate-y-1 hover:bg-accent-strong hover:shadow-[0_24px_60px_rgba(200,106,45,0.42)];
 }
 
 @utility btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-white/12 bg-white/4 px-5 py-3 text-[0.76rem] font-semibold uppercase tracking-[0.22em] text-text transition hover:border-accent/40 hover:bg-accent-soft;
+  @apply inline-flex items-center justify-center rounded-full border border-white/12 bg-white/4 px-5 py-3 text-[0.76rem] font-semibold uppercase tracking-[0.22em] text-text transition duration-500 hover:-translate-y-1 hover:border-accent/40 hover:bg-accent-soft;
 }
 
 @utility nav-link {
-  @apply rounded-full px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.24em] text-text-muted transition hover:bg-white/5 hover:text-text;
+  @apply rounded-full px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.24em] text-text-muted transition duration-500 hover:-translate-y-0.5 hover:bg-white/5 hover:text-text;
 }
 
 @utility nav-link-active {

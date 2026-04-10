@@ -3,7 +3,7 @@ import { companyProfile } from '../data/site'
 function ContactPage() {
   return (
     <div className="section-grid">
-      <section className="section-shell overflow-hidden">
+      <section className="section-shell overflow-hidden" data-reveal>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] lg:items-center">
           <div>
             <p className="section-eyebrow">Contact</p>
@@ -27,7 +27,7 @@ function ContactPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.78fr)]">
-        <section className="section-shell">
+        <section className="section-shell" data-reveal style={{ '--reveal-delay': '90ms' }}>
           <p className="section-eyebrow">Inquiry Form</p>
           <h2 className="heading-section mt-4 max-w-2xl">
             Submit a structured request for service discussion.
@@ -101,7 +101,7 @@ function ContactPage() {
           </form>
         </section>
 
-        <section className="section-shell">
+        <section className="section-shell" data-reveal style={{ '--reveal-delay': '130ms' }}>
           <p className="section-eyebrow">Contact Details</p>
           <h2 className="heading-section mt-4">
             Corporate contact channels presented clearly and professionally.

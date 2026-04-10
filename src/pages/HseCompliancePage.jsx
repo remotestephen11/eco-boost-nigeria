@@ -4,7 +4,7 @@ import { companyProfile } from '../data/site'
 function HseCompliancePage() {
   return (
     <div className="section-grid">
-      <section className="section-shell overflow-hidden lg:py-6">
+      <section className="section-shell overflow-hidden lg:py-6" data-reveal>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)] lg:items-center">
           <div>
             <p className="section-eyebrow">HSE &amp; Compliance</p>
@@ -55,7 +55,7 @@ function HseCompliancePage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '90ms' }}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow">Commitment Areas</p>
@@ -73,6 +73,8 @@ function HseCompliancePage() {
             <article
               key={item.title}
               className="premium-card bg-[linear-gradient(180deg,rgba(24,33,44,0.98),rgba(13,18,24,0.98))] p-5"
+              data-reveal
+              style={{ '--reveal-delay': '140ms' }}
             >
               <p className="text-[0.68rem] uppercase tracking-[0.26em] text-brand-gold">
                 Commitment
@@ -88,7 +90,7 @@ function HseCompliancePage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '140ms' }}>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
           <div>
             <p className="section-eyebrow">HSE Philosophy</p>
@@ -102,7 +104,7 @@ function HseCompliancePage() {
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {companyProfile.hseHighlight.pillars.map((pillar) => (
-              <article key={pillar.title} className="premium-card p-5">
+              <article key={pillar.title} className="premium-card p-5" data-reveal style={{ '--reveal-delay': '180ms' }}>
                 <p className="text-[0.68rem] uppercase tracking-[0.26em] text-accent">
                   HSE Pillar
                 </p>

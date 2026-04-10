@@ -3,7 +3,7 @@ import { companyProfile } from '../data/site'
 function OperationalExperiencePage() {
   return (
     <div className="section-grid">
-      <section className="section-shell overflow-hidden">
+      <section className="section-shell overflow-hidden" data-reveal>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-start">
           <div>
             <p className="section-eyebrow">Operational Experience</p>
@@ -26,9 +26,9 @@ function OperationalExperiencePage() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4" data-reveal style={{ '--reveal-delay': '80ms' }}>
         {companyProfile.operationalExperience.readinessAreas.map((item) => (
-          <article key={item.title} className="premium-card p-5">
+          <article key={item.title} className="premium-card p-5" data-reveal style={{ '--reveal-delay': '120ms' }}>
             <p className="text-[0.68rem] uppercase tracking-[0.26em] text-accent">
               Readiness Area
             </p>
@@ -42,7 +42,7 @@ function OperationalExperiencePage() {
         ))}
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '140ms' }}>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]">
           <div>
             <p className="section-eyebrow">Sectors Served</p>

@@ -5,7 +5,7 @@ import { companyProfile } from '../data/site'
 function ServicesPage() {
   return (
     <div className="section-grid">
-      <section className="section-shell overflow-hidden lg:py-6">
+      <section className="section-shell overflow-hidden lg:py-6" data-reveal>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.95fr)] lg:items-center">
           <div className="max-w-2xl">
             <p className="section-eyebrow">Services</p>
@@ -57,7 +57,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell" data-reveal style={{ '--reveal-delay': '90ms' }}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow">Service Portfolio</p>
@@ -73,7 +73,7 @@ function ServicesPage() {
 
       <section className="grid gap-4">
         {companyProfile.coreServices.map((service, index) => (
-          <article key={service.title} className="section-shell overflow-hidden">
+          <article key={service.title} className="section-shell overflow-hidden" data-reveal style={{ '--reveal-delay': '140ms' }}>
             <div className="grid gap-6 lg:grid-cols-[120px_minmax(0,1fr)_minmax(240px,0.52fr)] lg:items-start">
               <div className="flex items-center gap-4 lg:block">
                 <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] border border-accent/20 bg-accent-soft text-lg font-semibold uppercase tracking-[0.18em] text-accent">
