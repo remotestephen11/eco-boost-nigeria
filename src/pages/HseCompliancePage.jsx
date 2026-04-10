@@ -1,4 +1,4 @@
-import hseImage from '../assets/hse-industrial.png'
+import hseImage from '../assets/hse-industrial.jpg'
 import { companyProfile } from '../data/site'
 
 function HseCompliancePage() {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import servicesImage from '../assets/services-industrial.png'
+import servicesImage from '../assets/services-industrial.jpg'
 import { companyProfile } from '../data/site'
 
 function ServicesPage() {
@@ -30,7 +30,7 @@ function ServicesPage() {
             <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(8,12,17,0.16),rgba(8,12,17,0.56)_75%,rgba(8,12,17,0.82))]" />
             <img
               src={servicesImage}
-              alt="Industrial equipment and processing facility relevant to oil and gas services"
+              alt="Offshore drilling platform for oil and gas operations"
               className="h-[250px] w-full object-cover object-center sm:h-[300px] lg:h-[360px]"
             />
             <div className="absolute inset-x-0 bottom-0 z-20 p-4 sm:p-5">

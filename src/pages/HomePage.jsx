@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../assets/hero-oil-gas.png'
+import heroImage from '../assets/hero-oil-gas.jpg'
 import { companyProfile } from '../data/site'
 
 function HomePage() {
@@ -40,7 +40,7 @@ function HomePage() {
               <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(8,12,17,0.08),rgba(8,12,17,0.42)_72%,rgba(8,12,17,0.86))]" />
               <img
                 src={heroImage}
-                alt="Industrial specialists in protective equipment at an oil and gas facility"
+                alt="Offshore oil and gas production platform"
                 className="h-[280px] w-full object-cover object-center sm:h-[320px] lg:h-[390px]"
               />
 
